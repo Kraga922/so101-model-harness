@@ -1,0 +1,42 @@
+{
+  "multitask": {
+    "repo_id": "ufeig/TBD-smolvla-so101-multitask-208",
+    "revision": "a0cafd87aec5308d5e990b17b6e47df93ea5e246",
+    "policy_type": "smolvla",
+    "reference_dataset": "ufeig/move-to-zone-cad_20261023_155239",
+    "dataset_revision": "15b7257b5292b3d8024b2ac5d74e9f55b4d2add3",
+    "tasks": "Zone movement, two-cap stacking, red/black-cap bowl placement; aggregate task labels need the original manifest",
+    "training_dataset": "ufeig/so101-multitask-208-local_train (inaccessible local aggregate)",
+    "tested": "Recorded-observation MPS inference; no physical rollout"
+  },
+  "white-bowl": {
+    "repo_id": "ufeig/smolvla-white-caps-bowl",
+    "revision": "f703a3bb84327998937ee9bacd60f31911a748b6",
+    "policy_type": "smolvla",
+    "reference_dataset": "ufeig/bottlecaps-white-robocops-2",
+    "dataset_revision": "f6391287b76584e6f89f77353c51eacc6fe17f33",
+    "tasks": "White-cap bowl placement; preserve the exact recorded prompt variants",
+    "training_dataset": "ufeig/bottlecaps-white-bowl (inaccessible local aggregate; reference dataset is a related recording, not verified membership)",
+    "tested": "Metadata audit only; inference unverified"
+  },
+  "zone": {
+    "repo_id": "ufeig/cad-smolvla-so101-intozone",
+    "revision": "0e97998074d63abbd4936c628fa614908c87c719",
+    "policy_type": "smolvla",
+    "reference_dataset": "jsoon33/eig-so101-intozone-set",
+    "dataset_revision": "f255655e42dbaf64acc5ab80617810257932d88b",
+    "tasks": "Move the white/black/red bottlecap to the zone",
+    "training_dataset": "jsoon33/eig-so101-intozone-set",
+    "tested": "Metadata and official image-mask path only; inference unverified"
+  },
+  "pi05": {
+    "repo_id": "ufeig/hyperion-pi0.5",
+    "revision": "7258b50a42deee97730cb1bedeef640f839cf387",
+    "policy_type": "pi05",
+    "reference_dataset": "ufeig/bottlecaps-white-robocops-2",
+    "dataset_revision": "f6391287b76584e6f89f77353c51eacc6fe17f33",
+    "tasks": "Pick up the white bottle cap and place it in the bowl",
+    "training_dataset": "ufeig/bottlecaps-white-robocops-2",
+    "tested": "Metadata audit only; loading, memory requirements and inference unverified"
+  }
+}

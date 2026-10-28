@@ -1,0 +1,23 @@
+[project]
+name = "so101-model-harness"
+version = "0.1.0"
+description = "Guarded LeRobot harness for testing EIG SO-101 VLA checkpoints"
+requires-python = ">=3.12,<3.14"
+license = "Apache-2.0"
+dependencies = [
+  "lerobot[smolvla,feetech,dataset] @ https://github.com/huggingface/lerobot/archive/9f45b7b37cc4b33f8ecdb503aa4d209370bd528d.zip",
+]
+
+[project.optional-dependencies]
+pi = ["lerobot[pi]"]
+dev = ["ruff>=0.14,<1"]
+
+[tool.uv]
+package = false
+
+[tool.ruff]
+line-length = 110
+
+[tool.ruff.lint]
+select = ["E", "F", "I"]
+ignore = ["E501"]
